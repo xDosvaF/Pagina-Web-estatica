@@ -2,31 +2,55 @@
     background-color: white;
 }
 
+header{
+    background-color: blue; 
+    border-radius: 25px;
+}
 h1{
     font-size: 12px;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     padding: 8px;
+    background-color: transparent;
+
 }
 
+.indice-referencias{
+    display: flex;
+    align-items: center;
+    height:0px;
+    background-color: blue;
+    padding: 16px;
+    color: #ffffff;
+    border-radius: 25px;
+    
+}
+
+.titulo-indice{
+    background-color: transparent;
+    text-align: left;
+
+}
+
+.referencias{
+    font-weight: bold;
+    width:100%;
+    text-align: right;
+    padding: 3px;
+    font-size: 9px;
+    background-color: transparent;
+    color: #ffffff;
+}
 hr{
     border: none;
     border-top: 2px solid #000000;
     width: auto;
 }
 
-a{
-    color: black;
-    font-size: 9px;
-
-}
 h2{
     font-size: 9px;
 }
-.temas-referencia{
-    font-size: 9px;
-    
-}
+
 
 img{
     height: 35%;
