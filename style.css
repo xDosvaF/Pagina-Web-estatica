@@ -29,6 +29,7 @@ h1{
 .titulo-indice{
     background-color: transparent;
     text-align: left;
+    font-size: 8px;
 
 }
 
@@ -37,7 +38,7 @@ h1{
     width:100%;
     text-align: right;
     padding: 3px;
-    font-size: 9px;
+    font-size: 8px;
     background-color: transparent;
     color: #ffffff;
 }
