@@ -14,10 +14,12 @@ hr{
     border-top: 2px solid #000000;
     width: auto;
 }
-div{
-    padding-left: 12px;
-}
 
+a{
+    color: black;
+    font-size: 9px;
+
+}
 h2{
     font-size: 9px;
 }
