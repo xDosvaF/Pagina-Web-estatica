@@ -1,35 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema 2 — APIs REST y Web Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1> Hola, soy el tema 2 </h1>
-    </header>
-        <div class="indice-referencias">
-            <h2 class="titulo-indice"> TEMAS</h2>
-            <div class="referencias">
-                <a class="referencias" href="index.html"> Inicio </a>
-                <a class="referencias" href="tema1.html"> Tema 1 </a>
-                <a class="referencias" href="tema2.html"> Tema 2 </a>
-                <a class="referencias" href="tema3.html"> Tema 3 </a>
-                <a class="referencias" href="tema4.html"> Tema 4 </a>
-            </div>
-        </div>
-        <h2> Introducción</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnr-lJ0HjJOdTSdU3hiotZPaG0D5UJHLPTtQc1DZ_OHXsdGyqvBc3YLzEc&s=10" alt="foto-1">
-    <section>
 
+  <header>
+    <h1>APIs REST y Web Services</h1>
+    <p class="subtitulo">Tema 2 — Diseño, autenticación y buenas prácticas</p>
+  </header>
+
+  <div class="page-wrapper">
+
+    <div class="indice-referencias">
+      <h2 class="titulo-indice">Temas</h2>
+      <div class="referencias">
+        <a class="referencias" href="index.html">Inicio</a>
+        <a class="referencias" href="tema1.html">Tema 1</a>
+        <a class="referencias" href="tema2.html">Tema 2</a>
+        <a class="referencias" href="tema3.html">Tema 3</a>
+        <a class="referencias" href="tema4.html">Tema 4</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Introducción</h2>
+      <div class="intro-text">
+        <p>Una API (Application Programming Interface) es un conjunto de reglas que permite
+        que dos aplicaciones se comuniquen entre sí. Las APIs REST son el estándar más
+        extendido en la web moderna gracias a su simplicidad, escalabilidad y compatibilidad
+        con el protocolo HTTP.</p>
+      </div>
     </section>
 
-    <footer>
+    <hr>
 
-    </footer>
-    
+    <section>
+      <h2>¿Qué es REST?</h2>
+      <p>REST (Representational State Transfer) es un estilo arquitectónico que define cómo
+      los sistemas deben comunicarse a través de HTTP. Sus principios fundamentales son:</p>
+      <ul>
+        <li><strong>Sin estado (Stateless):</strong> cada petición contiene toda la información necesaria.</li>
+        <li><strong>Interfaz uniforme:</strong> uso consistente de verbos HTTP (GET, POST, PUT, DELETE).</li>
+        <li><strong>Recursos identificables:</strong> cada recurso tiene una URL única.</li>
+        <li><strong>Representaciones:</strong> los recursos se devuelven en formatos como JSON o XML.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Verbos HTTP y su uso</h2>
+      <div class="tabla-wrapper">
+        <table>
+          <tr>
+            <th>Verbo</th>
+            <th>Acción</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>Obtener un recurso</td>
+            <td>GET /usuarios/42</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>Crear un recurso nuevo</td>
+            <td>POST /usuarios</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>Reemplazar un recurso</td>
+            <td>PUT /usuarios/42</td>
+          </tr>
+          <tr>
+            <td>PATCH</td>
+            <td>Actualizar parcialmente</td>
+            <td>PATCH /usuarios/42</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>Eliminar un recurso</td>
+            <td>DELETE /usuarios/42</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Autenticación en APIs</h2>
+      <p>Proteger los endpoints de una API es crítico. Los mecanismos más comunes son:</p>
+
+      <div class="fila">
+        <div class="card-feature">
+          <h3>API Keys <button class="menu-btn" onclick="abrirPopup()">ver</button></h3>
+        </div>
+        <div class="card-feature">
+          <h3>JWT / OAuth 2.0 <button class="menu-btn" onclick="abrirPopup2()">ver</button></h3>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Buenas Prácticas</h2>
+      <ol>
+        <li>Versionar la API (ej. <code>/api/v1/</code>) para no romper clientes existentes.</li>
+        <li>Usar códigos de estado HTTP correctos (200, 201, 400, 401, 404, 500).</li>
+        <li>Devolver mensajes de error claros y consistentes en JSON.</li>
+        <li>Implementar paginación en listas largas de recursos.</li>
+        <li>Documentar con herramientas como Swagger / OpenAPI.</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Conclusión</h2>
+      <div class="intro-text">
+        <p>Las APIs REST son el puente que conecta sistemas modernos. Un buen diseño de API
+        no solo facilita la integración entre servicios, sino que también mejora la seguridad,
+        el mantenimiento y la experiencia del desarrollador que la consume.</p>
+      </div>
+    </section>
+
+    <div class="marquesina">
+      <p>Esto es todo del Tema 2 — APIs REST y Web Services. ¡Gracias por visitarnos!</p>
+    </div>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Popup — API Keys -->
+  <div class="popup" id="popup" onclick="cerrarPopupFondo(event)">
+    <div class="popup-content">
+      <span class="close" onclick="cerrarPopup()">✕</span>
+      <h3 style="margin-bottom:1rem;">API Keys</h3>
+      <ul>
+        <li>Cadena secreta que se envía en el header o en la URL.</li>
+        <li>Fácil de implementar, ideal para uso interno o entre servidores.</li>
+        <li>Desventaja: si se filtra, cualquiera puede usarla.</li>
+        <li>Siempre usar HTTPS para proteger la clave en tránsito.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup — JWT / OAuth -->
+  <div class="popup2" id="popup2" onclick="cerrarPopupFondo2(event)">
+    <div class="popup-content2">
+      <span class="close2" onclick="cerrarPopup2()">✕</span>
+      <h3 style="margin-bottom:1rem;">JWT / OAuth 2.0</h3>
+      <ul>
+        <li>JWT (JSON Web Token): token firmado que contiene la identidad del usuario.</li>
+        <li>OAuth 2.0: estándar de autorización para acceso delegado (ej. "Iniciar con Google").</li>
+        <li>Más seguros y flexibles que las API Keys simples.</li>
+        <li>Los tokens tienen expiración, lo que limita el daño en caso de robo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Proyecto grupal — Arquitectura de Software &nbsp;|&nbsp;
+      <a href="index.html">Volver al Inicio</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

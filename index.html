@@ -2,81 +2,120 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APIs y Bases de Datos</title>
-  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Componentes clave y mecanismos de comunicación</h1>
-  <h2>APIs y Bases de Datos</h2>
 
-  <!-- Menú -->
-  <nav>
-    <a href="#apis">APIs</a>
-    <a href="#basesdedatos">Bases de Datos</a>
-    <a href="#comunicacion">Comunicación</a>
-    <a href="#seguridad">Seguridad</a>
-  </nav>
+  <header>
+    <h1>Componentes Clave y Mecanismos de Comunicación</h1>
+    <p class="subtitulo">APIs · Bases de Datos · Comunicación · Seguridad</p>
+  </header>
 
-  <!-- Sección APIs -->
-  <section id="apis">
-    <h2>Interfaces de Programación de Aplicaciones (APIs)</h2>
-    <img src="img/api.png" alt="API Icono">
-    <p>Las APIs permiten que diferentes sistemas se comuniquen entre sí de manera estandarizada.</p>
-    <h3>Tipos de APIs</h3>
-    <ul>
-      <li>REST</li>
-      <li>SOAP</li>
-      <li>GraphQL</li>
-    </ul>
-    <table>
-      <tr><th>Tipo</th><th>Características</th></tr>
-      <tr><td>REST</td><td>Basado en HTTP, ligero</td></tr>
-      <tr><td>SOAP</td><td>Más complejo, basado en XML</td></tr>
-      <tr><td>GraphQL</td><td>Consultas flexibles y eficientes</td></tr>
-    </table>
-  </section>
+  <div class="page-wrapper">
 
-  <!-- Sección Bases de Datos -->
-  <section id="basesdedatos">
-    <h2>Bases de Datos</h2>
-    <img src="img/database.png" alt="DATA BASE Icono">
-    <p>Las bases de datos almacenan y organizan la información para que pueda ser consultada y modificada eficientemente.</p>
-    <h3>Clasificación</h3>
-    <ol>
-      <li>Relacionales (SQL)</li>
-      <li>No Relacionales (NoSQL)</li>
-    </ol>
-  </section>
+    <div class="indice-referencias">
+      <h2 class="titulo-indice">Temas</h2>
+      <div class="referencias">
+        <a class="referencias" href="index.html">Inicio</a>
+        <a class="referencias" href="tema1.html">Tema 1</a>
+        <a class="referencias" href="tema2.html">Tema 2</a>
+        <a class="referencias" href="tema3.html">Tema 3</a>
+        <a class="referencias" href="tema4.html">Tema 4</a>
+      </div>
+    </div>
 
-  <!-- Sección Comunicación -->
-  <section id="comunicacion">
-    <h2>Mecanismos de Comunicación</h2>
-    <img src="img/communication.png" alt="COMMUNICATION Icono">
-    <p>Los sistemas utilizan protocolos y APIs para intercambiar datos de manera segura y eficiente.</p>
-    <h3>Protocolos comunes</h3>
-    <ul>
-      <li>HTTP/HTTPS</li>
-      <li>WebSockets</li>
-      <li>MQTT</li>
-    </ul>
-  </section>
+    <div class="cards-grid">
+      <a href="tema1.html" class="topic-card">
+        <div class="num">01</div>
+        <h3>Arquitectura de Microservicios</h3>
+        <p>Monolitos vs microservicios, evolución y patrones.</p>
+      </a>
+      <a href="tema2.html" class="topic-card">
+        <div class="num">02</div>
+        <h3>APIs REST y Web Services</h3>
+        <p>Diseño, endpoints, autenticación y buenas prácticas.</p>
+      </a>
+      <a href="tema3.html" class="topic-card">
+        <div class="num">03</div>
+        <h3>Bases de Datos</h3>
+        <p>SQL vs NoSQL, modelos de datos y casos de uso.</p>
+      </a>
+      <a href="tema4.html" class="topic-card">
+        <div class="num">04</div>
+        <h3>Ventajas y Desafíos</h3>
+        <p>Criterios de implementación y comparativas técnicas.</p>
+      </a>
+    </div>
 
-  <!-- Sección Seguridad -->
-  <section id="seguridad">
-    <h2>Seguridad en la Comunicación</h2>
-    <img src="img/seguritylock.png" alt="SEGURITY LOCK">
-    <p>La seguridad es fundamental en el intercambio de datos entre APIs y bases de datos.</p>
-    <h3>Buenas prácticas</h3>
-    <ol>
-      <li>Uso de HTTPS</li>
-      <li>Autenticación y autorización</li>
-      <li>Cifrado de datos</li>
-    </ol>
-  </section>
+    <hr>
 
-  <!-- Enlace externo -->
+    <!-- Sección APIs -->
+    <section id="apis">
+      <h2>Interfaces de Programación de Aplicaciones (APIs)</h2>
+      <p>Las APIs permiten que diferentes sistemas se comuniquen entre sí de manera estandarizada.</p>
+      <h3>Tipos de APIs</h3>
+      <div class="tabla-wrapper">
+        <table>
+          <tr><th>Tipo</th><th>Características</th></tr>
+          <tr><td>REST</td><td>Basado en HTTP, ligero y muy popular</td></tr>
+          <tr><td>SOAP</td><td>Más complejo, basado en XML</td></tr>
+          <tr><td>GraphQL</td><td>Consultas flexibles y eficientes</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Sección Bases de Datos -->
+    <section id="basesdedatos">
+      <h2>Bases de Datos</h2>
+      <p>Las bases de datos almacenan y organizan la información para que pueda ser consultada y modificada eficientemente.</p>
+      <h3>Clasificación</h3>
+      <ol>
+        <li>Relacionales (SQL) — estructura tabular con esquema fijo</li>
+        <li>No Relacionales (NoSQL) — flexibles, orientadas a documentos, grafos o clave-valor</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <!-- Sección Comunicación -->
+    <section id="comunicacion">
+      <h2>Mecanismos de Comunicación</h2>
+      <p>Los sistemas utilizan protocolos y APIs para intercambiar datos de manera segura y eficiente.</p>
+      <h3>Protocolos comunes</h3>
+      <ul>
+        <li>HTTP/HTTPS — transferencia de hipertexto</li>
+        <li>WebSockets — comunicación bidireccional en tiempo real</li>
+        <li>MQTT — mensajería ligera para IoT</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- Sección Seguridad -->
+    <section id="seguridad">
+      <h2>Seguridad en la Comunicación</h2>
+      <p>La seguridad es fundamental en el intercambio de datos entre APIs y bases de datos.</p>
+      <h3>Buenas prácticas</h3>
+      <ol>
+        <li>Uso de HTTPS en todas las comunicaciones</li>
+        <li>Autenticación y autorización (OAuth 2.0, JWT)</li>
+        <li>Cifrado de datos en reposo y en tránsito</li>
+      </ol>
+    </section>
+
+  </div>
+
   <footer>
     <p>Más información en <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

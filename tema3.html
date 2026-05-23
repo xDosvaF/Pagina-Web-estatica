@@ -1,34 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema 3 — Bases de Datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1> Hola soy el tema 3</h1>
-    </header>
-        <div class="indice-referencias">
-            <h2 class="titulo-indice"> TEMAS</h2>
-            <div class="referencias">
-                <a class="referencias" href="index.html"> Inicio </a>
-                <a class="referencias" href="tema1.html"> Tema 1 </a>
-                <a class="referencias" href="tema2.html"> Tema 2 </a>
-                <a class="referencias" href="tema3.html"> Tema 3 </a>
-                <a class="referencias" href="tema4.html"> Tema 4 </a>
-            </div>
-        </div>
-        <h2> Introducción</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnr-lJ0HjJOdTSdU3hiotZPaG0D5UJHLPTtQc1DZ_OHXsdGyqvBc3YLzEc&s=10" alt="foto-1">
-    <section>
 
+  <header>
+    <h1>Bases de Datos</h1>
+    <p class="subtitulo">Tema 3 — SQL, NoSQL y modelos de datos</p>
+  </header>
+
+  <div class="page-wrapper">
+
+    <div class="indice-referencias">
+      <h2 class="titulo-indice">Temas</h2>
+      <div class="referencias">
+        <a class="referencias" href="index.html">Inicio</a>
+        <a class="referencias" href="tema1.html">Tema 1</a>
+        <a class="referencias" href="tema2.html">Tema 2</a>
+        <a class="referencias" href="tema3.html">Tema 3</a>
+        <a class="referencias" href="tema4.html">Tema 4</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Introducción</h2>
+      <div class="intro-text">
+        <p>Una base de datos es un sistema organizado para almacenar, gestionar y recuperar
+        información de manera eficiente. Es el componente que persiste el estado de cualquier
+        aplicación. Elegir el tipo correcto de base de datos es una de las decisiones más
+        importantes en el diseño de un sistema.</p>
+      </div>
     </section>
 
-    <footer>
+    <hr>
 
-    </footer>
+    <section>
+      <h2>Bases de Datos Relacionales (SQL)</h2>
+      <p>Organizan los datos en tablas con filas y columnas. Usan el lenguaje SQL para
+      realizar consultas. Son la opción predeterminada cuando los datos tienen estructura
+      clara y se necesita consistencia.</p>
+
+      <div class="fila">
+        <div class="card-feature">
+          <h3>Ventajas <button class="menu-btn" onclick="abrirPopup()">ver</button></h3>
+        </div>
+        <div class="card-feature">
+          <h3>Cuándo usarlas <button class="menu-btn" onclick="abrirPopup2()">ver</button></h3>
+        </div>
+      </div>
+
+      <h3>Ejemplos populares</h3>
+      <ul>
+        <li>PostgreSQL — robusta y de código abierto</li>
+        <li>MySQL / MariaDB — muy usada en aplicaciones web</li>
+        <li>SQLite — embebida, ideal para móviles y desktop</li>
+        <li>Microsoft SQL Server — entornos empresariales</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Bases de Datos No Relacionales (NoSQL)</h2>
+      <p>No usan tablas fijas. Son flexibles en cuanto a la estructura de los datos y
+      están optimizadas para escalar horizontalmente. Existen varios tipos según
+      el modelo de almacenamiento.</p>
+
+      <div class="tabla-wrapper">
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <td>Documentos</td>
+            <td>Almacena objetos JSON/BSON</td>
+            <td>MongoDB, CouchDB</td>
+          </tr>
+          <tr>
+            <td>Clave-Valor</td>
+            <td>Pares simples de clave y valor</td>
+            <td>Redis, DynamoDB</td>
+          </tr>
+          <tr>
+            <td>Columnar</td>
+            <td>Datos en columnas, óptimo para analítica</td>
+            <td>Cassandra, HBase</td>
+          </tr>
+          <tr>
+            <td>Grafos</td>
+            <td>Nodos y relaciones entre entidades</td>
+            <td>Neo4j, Amazon Neptune</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>SQL vs NoSQL — ¿Cuál elegir?</h2>
+      <div class="tabla-wrapper">
+        <table>
+          <tr>
+            <th>Criterio</th>
+            <th>SQL</th>
+            <th>NoSQL</th>
+          </tr>
+          <tr>
+            <td>Esquema</td>
+            <td>Rígido, predefinido</td>
+            <td>Flexible, dinámico</td>
+          </tr>
+          <tr>
+            <td>Escalado</td>
+            <td>Vertical (más hardware)</td>
+            <td>Horizontal (más nodos)</td>
+          </tr>
+          <tr>
+            <td>Consistencia</td>
+            <td>ACID garantizado</td>
+            <td>Eventual (BASE)</td>
+          </tr>
+          <tr>
+            <td>Consultas</td>
+            <td>SQL estándar</td>
+            <td>API propia por motor</td>
+          </tr>
+          <tr>
+            <td>Ideal para</td>
+            <td>Transacciones, finanzas</td>
+            <td>Big Data, tiempo real, IoT</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Conclusión</h2>
+      <div class="intro-text">
+        <p>No existe una base de datos superior en términos absolutos. La elección correcta
+        depende del tipo de datos, el volumen esperado, los requerimientos de consistencia
+        y la naturaleza de las consultas. En sistemas complejos es común usar ambos tipos
+        en paralelo (persistencia políglota).</p>
+      </div>
+    </section>
+
+    <div class="marquesina">
+      <p>Esto es todo del Tema 3 — Bases de Datos. ¡Gracias por visitarnos!</p>
+    </div>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Popup — Ventajas SQL -->
+  <div class="popup" id="popup" onclick="cerrarPopupFondo(event)">
+    <div class="popup-content">
+      <span class="close" onclick="cerrarPopup()">✕</span>
+      <h3 style="margin-bottom:1rem;">Ventajas de SQL</h3>
+      <ul>
+        <li>Garantías ACID: Atomicidad, Consistencia, Aislamiento y Durabilidad.</li>
+        <li>Relaciones claras entre tablas mediante claves foráneas.</li>
+        <li>Lenguaje estándar (SQL) que funciona en múltiples motores.</li>
+        <li>Herramientas maduras de administración, backup y replicación.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup — Cuándo usar SQL -->
+  <div class="popup2" id="popup2" onclick="cerrarPopupFondo2(event)">
+    <div class="popup-content2">
+      <span class="close2" onclick="cerrarPopup2()">✕</span>
+      <h3 style="margin-bottom:1rem;">¿Cuándo usar bases de datos relacionales?</h3>
+      <ul>
+        <li>Cuando los datos tienen estructura clara y bien definida.</li>
+        <li>Aplicaciones financieras o de e-commerce donde la consistencia es crítica.</li>
+        <li>Cuando se requieren joins complejos entre múltiples entidades.</li>
+        <li>Proyectos con equipo pequeño sin experiencia en NoSQL.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Proyecto grupal — Arquitectura de Software &nbsp;|&nbsp;
+      <a href="index.html">Volver al Inicio</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
