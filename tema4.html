@@ -3,225 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema 4 — Ventajas, Desafíos y Criterios de Implementación</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Tema 4 - Ventajas y Desafíos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Ventajas, Desafíos y Criterios de Implementación</h1>
-    <p class="subtitulo">Tema 4 — Microservicios en la práctica</p>
-  </header>
+<header>
+  <h1>Ventajas, Desafíos y Criterios de Implementación</h1>
+</header>
 
-  <div class="page-wrapper">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="tema1.html">Tema 1</a>
+  <a href="tema2.html">Tema 2</a>
+  <a href="tema3.html">Tema 3</a>
+  <a href="tema4.html">Tema 4</a>
+</nav>
 
-    <div class="indice-referencias">
-      <h2 class="titulo-indice">Temas</h2>
-      <div class="referencias">
-        <a class="referencias" href="index.html">Inicio</a>
-        <a class="referencias" href="tema1.html">Tema 1</a>
-        <a class="referencias" href="tema2.html">Tema 2</a>
-        <a class="referencias" href="tema3.html">Tema 3</a>
-        <a class="referencias" href="tema4.html">Tema 4</a>
-      </div>
-    </div>
+<main>
+  <h2>Introducción</h2>
+  <p>La arquitectura de microservicios divide una aplicación en servicios independientes que pueden desarrollarse y desplegarse por separado. Esto mejora la escalabilidad y flexibilidad, pero también trae desafíos técnicos importantes.</p>
 
-    <section>
-      <h2>Introducción</h2>
-      <div class="intro-text">
-        <p>La arquitectura de microservicios representa una evolución importante en el
-        desarrollo de software moderno. Este enfoque divide una aplicación en pequeños
-        servicios independientes que pueden desarrollarse, desplegarse y mantenerse de
-        forma separada. Sin embargo, también surgen desafíos técnicos que requieren
-        planificación adecuada y herramientas especializadas.</p>
-      </div>
-    </section>
+  <img src="https://aprenderbigdata.com/wp-content/uploads/curso-microservicios-ibm-coursera.jpg.webp" alt="Arquitectura de Microservicios">
 
-    <hr>
+  <hr>
 
-    <section>
-      <h2>Ventajas de los Microservicios</h2>
-      <p>Su diseño modular permite una mejor organización y facilita el crecimiento
-      continuo de las aplicaciones.</p>
+  <h2>Ventajas</h2>
+  <p>Los microservicios tienen múltiples beneficios que los hacen populares en empresas de gran escala:</p>
+  <ul>
+    <li>Escalabilidad independiente por servicio</li>
+    <li>Actualizaciones sin afectar toda la aplicación</li>
+    <li>Mayor tolerancia a fallos</li>
+    <li>Equipos de desarrollo más autónomos</li>
+    <li>Facilidad para usar distintas tecnologías por servicio</li>
+  </ul>
 
-      <div class="fila">
-        <div class="card-feature">
-          <h3>Técnicas <button class="menu-btn" onclick="abrirPopup()">ver</button></h3>
-        </div>
-        <div class="card-feature">
-          <h3>Organizacionales <button class="menu-btn" onclick="abrirPopup2()">ver</button></h3>
-        </div>
-      </div>
-    </section>
+  <hr>
 
-    <hr>
+  <h2>Desafíos Técnicos</h2>
+  <ol>
+    <li>Complejidad en la comunicación entre servicios</li>
+    <li>Mayor dificultad para monitorear el sistema completo</li>
+    <li>Administración de múltiples bases de datos</li>
+    <li>Mayor costo de infraestructura</li>
+    <li>Seguridad distribuida entre servicios</li>
+    <li>Necesidad de herramientas de automatización</li>
+  </ol>
 
-    <section>
-      <h2>Desafíos Técnicos</h2>
-      <p>Estos retos deben considerarse desde las primeras etapas del proyecto para
-      evitar problemas futuros.</p>
-      <ol>
-        <li>Complejidad en la comunicación entre servicios.</li>
-        <li>Mayor dificultad para monitorear el sistema completo.</li>
-        <li>Administración de múltiples bases de datos (persistencia políglota).</li>
-        <li>Incremento en los costos de infraestructura.</li>
-        <li>Seguridad distribuida entre diferentes servicios.</li>
-        <li>Necesidad de herramientas avanzadas de automatización (CI/CD).</li>
-      </ol>
-    </section>
+  <hr>
 
-    <hr>
+  <h2>Tabla Comparativa</h2>
+  <table>
+    <tr><th>Aspecto</th><th>Ventaja</th><th>Desafío</th></tr>
+    <tr><td>Escalabilidad</td><td>Escala por servicio</td><td>Mayor administración</td></tr>
+    <tr><td>Mantenimiento</td><td>Actualizaciones independientes</td><td>Arquitectura más compleja</td></tr>
+    <tr><td>Disponibilidad</td><td>Tolerancia a fallos</td><td>Monitoreo constante</td></tr>
+    <tr><td>Desarrollo</td><td>Equipos especializados</td><td>Coordinación entre servicios</td></tr>
+  </table>
 
-    <section>
-      <h2>Tabla Comparativa</h2>
-      <div class="tabla-wrapper">
-        <table>
-          <tr>
-            <th>Aspecto</th>
-            <th>Ventaja</th>
-            <th>Desafío</th>
-          </tr>
-          <tr>
-            <td>Escalabilidad</td>
-            <td>Escala por servicio individual</td>
-            <td>Mayor administración de recursos</td>
-          </tr>
-          <tr>
-            <td>Mantenimiento</td>
-            <td>Actualizaciones independientes</td>
-            <td>Arquitectura más compleja</td>
-          </tr>
-          <tr>
-            <td>Disponibilidad</td>
-            <td>Tolerancia a fallos parciales</td>
-            <td>Monitoreo constante necesario</td>
-          </tr>
-          <tr>
-            <td>Desarrollo</td>
-            <td>Equipos especializados por dominio</td>
-            <td>Coordinación entre servicios</td>
-          </tr>
-          <tr>
-            <td>Tecnología</td>
-            <td>Libertad de stack por servicio</td>
-            <td>Heterogeneidad difícil de mantener</td>
-          </tr>
-        </table>
-      </div>
-    </section>
+  <hr>
 
-    <hr>
+  <h2>Criterios de Implementación</h2>
+  <p>No todos los proyectos necesitan microservicios. Hay que evaluar:</p>
+  <ul>
+    <li>Tamaño y complejidad de la aplicación</li>
+    <li>Cantidad de usuarios esperados</li>
+    <li>Experiencia del equipo con contenedores</li>
+    <li>Presupuesto disponible para infraestructura</li>
+  </ul>
 
-    <section>
-      <h2>Criterios de Implementación</h2>
-      <p>No todos los proyectos requieren microservicios. La decisión debe basarse en
-      las necesidades reales del sistema y en los recursos disponibles.</p>
-      <ul>
-        <li>Tamaño y complejidad de la aplicación.</li>
-        <li>Cantidad de usuarios esperados y picos de tráfico.</li>
-        <li>Necesidad real de escalabilidad independiente.</li>
-        <li>Experiencia técnica del equipo con contenedores y orquestación.</li>
-        <li>Capacidad para administrar infraestructura distribuida.</li>
-        <li>Presupuesto disponible para herramientas y servicios cloud.</li>
-      </ul>
-    </section>
+  <hr>
 
-    <hr>
+  <h2>Conclusión</h2>
+  <p>Los microservicios son una buena opción cuando la escala y la autonomía de los equipos lo justifican. Para proyectos pequeños, un monolito bien organizado suele ser suficiente.</p>
 
-    <section>
-      <h2>Herramientas Recomendadas</h2>
-      <div class="tabla-wrapper">
-        <table>
-          <tr>
-            <th>Categoría</th>
-            <th>Herramienta</th>
-            <th>Propósito</th>
-          </tr>
-          <tr>
-            <td>Contenedores</td>
-            <td>Docker</td>
-            <td>Empaquetar y aislar servicios</td>
-          </tr>
-          <tr>
-            <td>Orquestación</td>
-            <td>Kubernetes</td>
-            <td>Gestionar y escalar contenedores</td>
-          </tr>
-          <tr>
-            <td>Monitoreo</td>
-            <td>Prometheus + Grafana</td>
-            <td>Métricas y dashboards en tiempo real</td>
-          </tr>
-          <tr>
-            <td>Trazabilidad</td>
-            <td>Jaeger / Zipkin</td>
-            <td>Rastrear requests entre servicios</td>
-          </tr>
-          <tr>
-            <td>Mensajería</td>
-            <td>RabbitMQ / Kafka</td>
-            <td>Comunicación asíncrona entre servicios</td>
-          </tr>
-        </table>
-      </div>
-    </section>
+  <p>Más información: <a href="https://www.iebschool.com/hub/ventajas-desventajas-tecnologia/" target="_blank">IEBS School</a></p>
 
-    <hr>
-
-    <section>
-      <h2>Conclusión</h2>
-      <div class="intro-text">
-        <p>Los microservicios ofrecen importantes ventajas en escalabilidad, mantenimiento
-        y flexibilidad. No obstante, presentan desafíos técnicos que requieren experiencia
-        y planificación. Analizar cuidadosamente los criterios de implementación permitirá
-        determinar si esta arquitectura es la opción más adecuada para el proyecto.</p>
-      </div>
-    </section>
-
-    <div class="marquesina">
-      <p>Esto es todo del Tema 4 — Ventajas, Desafíos y Criterios de Implementación. ¡Gracias por visitarnos!</p>
-    </div>
-
-  </div><!-- /page-wrapper -->
-
-  <!-- Popup — Ventajas técnicas -->
-  <div class="popup" id="popup" onclick="cerrarPopupFondo(event)">
-    <div class="popup-content">
-      <span class="close" onclick="cerrarPopup()">✕</span>
-      <h3 style="margin-bottom:1rem;">Ventajas Técnicas</h3>
-      <ul>
-        <li>Escalabilidad independiente de cada servicio.</li>
-        <li>Actualizaciones rápidas sin afectar toda la aplicación.</li>
-        <li>Mayor disponibilidad y tolerancia a fallos.</li>
-        <li>Facilidad para incorporar nuevas tecnologías por servicio.</li>
-      </ul>
-    </div>
+  <div class="marquesina">
+    <p>Esto es todo del Tema 4. ¡Gracias por visitarnos!</p>
   </div>
+</main>
 
-  <!-- Popup — Ventajas organizacionales -->
-  <div class="popup2" id="popup2" onclick="cerrarPopupFondo2(event)">
-    <div class="popup-content2">
-      <span class="close2" onclick="cerrarPopup2()">✕</span>
-      <h3 style="margin-bottom:1rem;">Ventajas Organizacionales</h3>
-      <ul>
-        <li>Equipos de desarrollo más autónomos y especializados.</li>
-        <li>Cada equipo puede elegir su propio ciclo de deploy.</li>
-        <li>Menor riesgo de conflictos en el código entre equipos.</li>
-        <li>Permite escalar el equipo de forma más natural por dominio.</li>
-      </ul>
-    </div>
-  </div>
+<footer>
+  <p>Proyecto grupal &nbsp;|&nbsp; <a href="index.html">Volver al Inicio</a></p>
+</footer>
 
-  <footer>
-    <p>Proyecto grupal — Arquitectura de Software &nbsp;|&nbsp;
-      <a href="https://www.iebschool.com/hub/ventajas-desventajas-tecnologia/" target="_blank">Fuente externa</a> &nbsp;|&nbsp;
-      <a href="index.html">Volver al Inicio</a>
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

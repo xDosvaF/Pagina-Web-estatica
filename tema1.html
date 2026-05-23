@@ -3,180 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema 1 — Arquitectura de Microservicios</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Tema 1 - Arquitectura de Microservicios</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Arquitectura de Microservicios</h1>
-    <p class="subtitulo">Tema 1 — Monolitos, microservicios y evolución</p>
-  </header>
+<header>
+  <h1>Arquitectura de Microservicios</h1>
+</header>
 
-  <div class="page-wrapper">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="tema1.html">Tema 1</a>
+  <a href="tema2.html">Tema 2</a>
+  <a href="tema3.html">Tema 3</a>
+  <a href="tema4.html">Tema 4</a>
+</nav>
 
-    <div class="indice-referencias">
-      <h2 class="titulo-indice">Temas</h2>
-      <div class="referencias">
-        <a class="referencias" href="index.html">Inicio</a>
-        <a class="referencias" href="tema1.html">Tema 1</a>
-        <a class="referencias" href="tema2.html">Tema 2</a>
-        <a class="referencias" href="tema3.html">Tema 3</a>
-        <a class="referencias" href="tema4.html">Tema 4</a>
-      </div>
-    </div>
+<main>
+  <h2>Introducción</h2>
+  <p>Durante décadas, la forma predominante de construir software fue el monolito: una sola aplicación que contenía toda la lógica de negocio, la interfaz de usuario y el acceso a datos. Con la llegada de la web a escala y el cloud computing, sus limitaciones comenzaron a hacerse evidentes.</p>
 
-    <section>
-      <h2>Introducción</h2>
-      <div class="intro-text">
-        <p>Durante décadas, la forma predominante de construir software fue el monolito: una sola
-        aplicación que contenía toda la lógica de negocio, la interfaz de usuario y el acceso a datos,
-        empaquetada y desplegada como una unidad. Con la llegada de la web a escala, el cloud computing
-        y los equipos distribuidos, sus limitaciones comenzaron a hacerse evidentes.</p>
-      </div>
-    </section>
+  <hr>
 
-    <hr>
+  <h2>El Monolito</h2>
+  <p>Un monolito es una arquitectura donde todos los componentes están acoplados en un mismo proceso desplegable.</p>
 
-    <section>
-      <h2>El Monolito</h2>
-      <p>Un monolito es una arquitectura donde todos los componentes de la aplicación
-      (presentación, lógica de negocio, acceso a datos) están acoplados en un mismo proceso desplegable.</p>
-
-      <div class="fila">
-        <div class="card-feature">
-          <h3>Fortalezas <button class="menu-btn" onclick="abrirPopup()">ver</button></h3>
-        </div>
-        <div class="card-feature">
-          <h3>Debilidades <button class="menu-btn2" onclick="abrirPopup2()">ver</button></h3>
-        </div>
-      </div>
-
-      <img src="MONOLITO.webp" alt="Diagrama de arquitectura monolítica">
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Los Microservicios</h2>
-      <p>Los microservicios descomponen la aplicación en servicios pequeños y autónomos, cada
-      uno responsable de un dominio específico (usuarios, pagos, catálogo, notificaciones),
-      que se comunican entre sí mediante APIs o colas de mensajes.</p>
-
-      <div class="fila">
-        <div class="card-feature">
-          <h3>Fortalezas <button class="menu-btn" onclick="abrirPopup3()">ver</button></h3>
-        </div>
-        <div class="card-feature">
-          <h3>Debilidades <button class="menu-btn2" onclick="abrirPopup4()">ver</button></h3>
-        </div>
-      </div>
-
-      <img src="MICROSERVICIOS.webp" alt="Diagrama de arquitectura de microservicios">
-    </section>
-
-    <hr>
-
-    <section>
-      <div class="unn">
-        <div>
-          <h2>La Evolución Natural</h2>
-          <p>El patrón más común en la industria es comenzar con un monolito bien estructurado
-          (a veces llamado "monolito modular") y migrar progresivamente hacia microservicios cuando
-          el sistema alcanza un nivel de madurez y escala que lo justifica. Martin Fowler llama a esto
-          el enfoque "Monolith First".</p>
-          <br>
-          <p>La clave está en que los microservicios no son una solución a problemas técnicos, sino
-          fundamentalmente a problemas organizacionales: permiten que equipos grandes trabajen
-          de forma independiente sobre dominios distintos sin pisarse constantemente.</p>
-        </div>
-        <img id="evol" src="EVOLUCION.svg" alt="Evolución de monolito a microservicios">
-      </div>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Conclusión</h2>
-      <div class="intro-text">
-        <p>No existe una arquitectura universalmente superior. El monolito es excelente para comenzar
-        rápido con equipos pequeños; los microservicios brillan cuando la escala, la autonomía de
-        equipos y la resiliencia son prioridades reales. Como dice el principio: "primero hazlo
-        funcionar, luego hazlo escalar".</p>
-      </div>
-    </section>
-
-    <div class="marquesina">
-      <p>Esto es todo del Tema 1 — Arquitectura de Microservicios. ¡Gracias por visitarnos!</p>
-    </div>
-
-  </div><!-- /page-wrapper -->
-
-  <!-- Popups — Fortalezas Monolito -->
-  <div class="popup" id="popup" onclick="cerrarPopupFondo(event)">
-    <div class="popup-content">
-      <span class="close" onclick="cerrarPopup()">✕</span>
-      <h3 style="margin-bottom:1rem;">Fortalezas del Monolito</h3>
-      <ul>
-        <li>Simplicidad de desarrollo y despliegue al inicio.</li>
-        <li>Facilidad para depurar y rastrear errores.</li>
-        <li>Menor latencia entre componentes (comunicación en memoria).</li>
-        <li>Ideal para equipos pequeños y proyectos en etapas tempranas.</li>
-      </ul>
-    </div>
+  <div class="fila">
+    <h3>Fortalezas <button onclick="abrirPopup('p1')">ver</button></h3>
+    <h3>Debilidades <button onclick="abrirPopup('p2')">ver</button></h3>
   </div>
 
-  <!-- Popup — Debilidades Monolito -->
-  <div class="popup2" id="popup2" onclick="cerrarPopupFondo2(event)">
-    <div class="popup-content2">
-      <span class="close2" onclick="cerrarPopup2()">✕</span>
-      <h3 style="margin-bottom:1rem;">Debilidades del Monolito</h3>
-      <ul>
-        <li>A medida que crece, el código se vuelve difícil de mantener.</li>
-        <li>Un fallo grave puede tumbar toda la aplicación.</li>
-        <li>Escalar implica replicar todo el sistema.</li>
-        <li>Los despliegues se vuelven lentos y riesgosos.</li>
-      </ul>
-    </div>
+  <img src="MONOLITO.webp" alt="Diagrama monolito">
+
+  <hr>
+
+  <h2>Los Microservicios</h2>
+  <p>Descomponen la aplicación en servicios pequeños y autónomos, cada uno responsable de un dominio específico, que se comunican entre sí mediante APIs.</p>
+
+  <div class="fila">
+    <h3>Fortalezas <button onclick="abrirPopup('p3')">ver</button></h3>
+    <h3>Debilidades <button onclick="abrirPopup('p4')">ver</button></h3>
   </div>
 
-  <!-- Popup — Fortalezas Microservicios -->
-  <div class="popup3" id="popup3" onclick="cerrarPopupFondo3(event)">
-    <div class="popup-content3">
-      <span class="close3" onclick="cerrarPopup3()">✕</span>
-      <h3 style="margin-bottom:1rem;">Fortalezas de los Microservicios</h3>
-      <ul>
-        <li>Escalabilidad granular: solo escala el servicio que lo necesita.</li>
-        <li>Despliegues independientes por equipo.</li>
-        <li>Tolerancia a fallos: un servicio caído no afecta todo.</li>
-        <li>Favorece equipos autónomos organizados por dominio de negocio.</li>
-      </ul>
-    </div>
+  <img src="MICROSERVICIOS.webp" alt="Diagrama microservicios">
+
+  <hr>
+
+  <h2>La Evolución Natural</h2>
+  <p>El patrón más común es comenzar con un monolito bien estructurado y migrar hacia microservicios cuando el sistema alcanza una escala que lo justifica. Martin Fowler llama a esto el enfoque "Monolith First".</p>
+  <p>Los microservicios permiten que equipos grandes trabajen de forma independiente sobre dominios distintos sin pisarse constantemente.</p>
+
+  <img src="EVOLUCION.svg" alt="Evolución de monolito a microservicios">
+
+  <hr>
+
+  <h2>Conclusión</h2>
+  <p>No existe una arquitectura universalmente superior. El monolito es ideal para comenzar rápido; los microservicios brillan cuando la escala y la autonomía de equipos son prioridades reales.</p>
+
+  <div class="marquesina">
+    <p>Esto es todo del Tema 1. ¡Gracias por visitarnos!</p>
   </div>
+</main>
 
-  <!-- Popup — Debilidades Microservicios -->
-  <div class="popup4" id="popup4" onclick="cerrarPopupFondo4(event)">
-    <div class="popup-content4">
-      <span class="close4" onclick="cerrarPopup4()">✕</span>
-      <h3 style="margin-bottom:1rem;">Debilidades de los Microservicios</h3>
-      <ul>
-        <li>Complejidad operacional elevada (Kubernetes, service mesh, observabilidad).</li>
-        <li>La comunicación entre servicios introduce latencia y nuevos puntos de fallo.</li>
-        <li>Las transacciones distribuidas son difíciles de gestionar.</li>
-        <li>El debugging es más complejo al rastrear requests entre servicios.</li>
-      </ul>
-    </div>
+<div class="popup" id="p1" onclick="if(event.target===this) cerrarPopup('p1')">
+  <div class="popup-inner">
+    <button class="cerrar" onclick="cerrarPopup('p1')">✕</button>
+    <h3>Fortalezas del Monolito</h3>
+    <ul>
+      <li>Simplicidad de desarrollo al inicio</li>
+      <li>Fácil de depurar y rastrear errores</li>
+      <li>Menor latencia entre componentes</li>
+      <li>Ideal para equipos pequeños</li>
+    </ul>
   </div>
+</div>
 
-  <footer>
-    <p>Proyecto grupal — Arquitectura de Software &nbsp;|&nbsp;
-      <a href="index.html">Volver al Inicio</a>
-    </p>
-  </footer>
+<div class="popup" id="p2" onclick="if(event.target===this) cerrarPopup('p2')">
+  <div class="popup-inner">
+    <button class="cerrar" onclick="cerrarPopup('p2')">✕</button>
+    <h3>Debilidades del Monolito</h3>
+    <ul>
+      <li>El código se vuelve difícil de mantener al crecer</li>
+      <li>Un fallo puede tumbar toda la aplicación</li>
+      <li>Escalar implica replicar todo el sistema</li>
+      <li>Los despliegues se vuelven lentos y riesgosos</li>
+    </ul>
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<div class="popup" id="p3" onclick="if(event.target===this) cerrarPopup('p3')">
+  <div class="popup-inner">
+    <button class="cerrar" onclick="cerrarPopup('p3')">✕</button>
+    <h3>Fortalezas de los Microservicios</h3>
+    <ul>
+      <li>Escalabilidad granular por servicio</li>
+      <li>Despliegues independientes por equipo</li>
+      <li>Un servicio caído no afecta los demás</li>
+      <li>Equipos autónomos por dominio de negocio</li>
+    </ul>
+  </div>
+</div>
+
+<div class="popup" id="p4" onclick="if(event.target===this) cerrarPopup('p4')">
+  <div class="popup-inner">
+    <button class="cerrar" onclick="cerrarPopup('p4')">✕</button>
+    <h3>Debilidades de los Microservicios</h3>
+    <ul>
+      <li>Complejidad operacional elevada</li>
+      <li>La comunicación entre servicios introduce latencia</li>
+      <li>Las transacciones distribuidas son difíciles</li>
+      <li>El debugging requiere rastrear múltiples servicios</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>Proyecto grupal &nbsp;|&nbsp; <a href="index.html">Volver al Inicio</a></p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
