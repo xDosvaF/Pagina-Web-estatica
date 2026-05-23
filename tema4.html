@@ -1,33 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventajas, Desafíos Técnicos y Criterios de Implementación</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="script.js"></script>
 </head>
+
 <body>
+
     <header>
-        <h1> Hola soy el tema 4</h1>
+        <h1>Arquitectura de Microservicios</h1>
     </header>
-        <div class="indice-referencias">
-            <h2 class="titulo-indice"> TEMAS</h2>
-            <div class="referencias">
-                <a class="referencias" href="index.html"> Inicio </a>
-                <a class="referencias" href="tema1.html"> Tema 1 </a>
-                <a class="referencias" href="tema2.html"> Tema 2 </a>
-                <a class="referencias" href="tema3.html"> Tema 3 </a>
-                <a class="referencias" href="tema4.html"> Tema 4 </a>
-            </div>
+
+    <div class="indice-referencias">
+
+        <h2 class="titulo-indice">TEMAS</h2>
+
+        <div class="referencias">
+            <a class="referencias" href="index.html">Inicio</a>
+            <a class="referencias" href="tema1.html">Tema 1</a>
+            <a class="referencias" href="tema2.html">Tema 2</a>
+            <a class="referencias" href="tema3.html">Tema 3</a>
+            <a class="referencias" href="tema4.html">Tema 4</a>
         </div>
-        <h2> Introducción</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnr-lJ0HjJOdTSdU3hiotZPaG0D5UJHLPTtQc1DZ_OHXsdGyqvBc3YLzEc&s=10" alt="foto-1">
+
+    </div>
+
+    <h2>Introducción</h2>
+
+    <p>
+        La arquitectura de microservicios representa una evolución importante en el
+        desarrollo de software moderno. Este enfoque divide una aplicación en
+        pequeños servicios independientes que pueden desarrollarse, desplegarse y
+        mantenerse de forma separada. Gracias a esta estructura, las organizaciones
+        pueden mejorar la escalabilidad, la disponibilidad y la flexibilidad de sus
+        sistemas. Sin embargo, también surgen desafíos técnicos que requieren una
+        planificación adecuada y herramientas especializadas para su correcta gestión.
+    </p>
+
+    <img src="https://aprenderbigdata.com/wp-content/uploads/curso-microservicios-ibm-coursera.jpg.webp"
+        alt="Arquitectura de Microservicios">
+
     <section>
+
+        <h2>Ventajas de los Microservicios</h2>
+
+        <p>
+            Los microservicios ofrecen múltiples beneficios que los han convertido en
+            una de las arquitecturas más utilizadas por empresas tecnológicas de gran
+            escala. Su diseño modular permite una mejor organización y facilita el
+            crecimiento continuo de las aplicaciones.
+        </p>
+
+        <ul>
+            <li>Escalabilidad independiente de cada servicio.</li>
+            <li>Actualizaciones rápidas sin afectar toda la aplicación.</li>
+            <li>Mayor disponibilidad y tolerancia a fallos.</li>
+            <li>Equipos de desarrollo más organizados y autónomos.</li>
+            <li>Facilidad para incorporar nuevas tecnologías.</li>
+            <li>Mejor mantenimiento del software.</li>
+        </ul>
+
+        <h2>Imagen Comparativa</h2>
+
+        <p>
+            La siguiente imagen muestra algunas ventajas y desventajas generales de la
+            tecnología, aspectos que también pueden relacionarse con la implementación
+            de arquitecturas modernas como los microservicios.
+        </p>
+
+        <img src="ventajas-desventajas.png"
+            alt="Ventajas y Desventajas de la Tecnología">
+
+        <h2>Desafíos Técnicos</h2>
+
+        <p>
+            A pesar de sus beneficios, la implementación de microservicios también
+            implica diversos retos técnicos. Estos desafíos deben ser considerados
+            desde las primeras etapas del proyecto para evitar problemas futuros.
+        </p>
+
+        <ol>
+            <li>Complejidad en la comunicación entre servicios.</li>
+            <li>Mayor dificultad para monitorear el sistema completo.</li>
+            <li>Administración de múltiples bases de datos.</li>
+            <li>Incremento en los costos de infraestructura.</li>
+            <li>Seguridad distribuida entre diferentes servicios.</li>
+            <li>Necesidad de herramientas avanzadas de automatización.</li>
+        </ol>
+
+        <h2>Tabla Comparativa</h2>
+
+        <table border="1">
+
+            <tr>
+                <th>Aspecto</th>
+                <th>Ventajas</th>
+                <th>Desafíos</th>
+            </tr>
+
+            <tr>
+                <td>Escalabilidad</td>
+                <td>Permite crecer por servicio.</td>
+                <td>Mayor administración de recursos.</td>
+            </tr>
+
+            <tr>
+                <td>Mantenimiento</td>
+                <td>Actualizaciones independientes.</td>
+                <td>Arquitectura más compleja.</td>
+            </tr>
+
+            <tr>
+                <td>Disponibilidad</td>
+                <td>Tolerancia a fallos.</td>
+                <td>Monitoreo constante.</td>
+            </tr>
+
+            <tr>
+                <td>Desarrollo</td>
+                <td>Equipos especializados.</td>
+                <td>Coordinación entre servicios.</td>
+            </tr>
+
+        </table>
+
+        <h2>Criterios de Implementación</h2>
+
+        <p>
+            Antes de adoptar una arquitectura basada en microservicios es importante
+            evaluar diversos factores. No todos los proyectos requieren este enfoque.
+            La decisión debe basarse en las necesidades reales del sistema y en los
+            recursos disponibles.
+        </p>
+
+        <ul>
+            <li>Tamaño y complejidad de la aplicación.</li>
+            <li>Cantidad de usuarios esperados.</li>
+            <li>Necesidad de escalabilidad.</li>
+            <li>Experiencia técnica del equipo.</li>
+            <li>Capacidad para administrar infraestructura distribuida.</li>
+            <li>Presupuesto disponible para herramientas y servicios.</li>
+        </ul>
+
+        <h2>Recomendaciones</h2>
+
+        <p>
+            Para implementar correctamente una arquitectura de microservicios se
+            recomienda utilizar tecnologías como Docker para la contenerización,
+            Kubernetes para la orquestación y herramientas de monitoreo que permitan
+            supervisar el estado de cada servicio en tiempo real.
+        </p>
+
+        <h2>Conclusión</h2>
+
+        <p>
+            Los microservicios ofrecen importantes ventajas en términos de
+            escalabilidad, mantenimiento y flexibilidad. No obstante, también
+            presentan desafíos técnicos que requieren experiencia y planificación.
+            Analizar cuidadosamente los criterios de implementación permitirá
+            determinar si esta arquitectura es la opción más adecuada para un
+            proyecto específico.
+        </p>
+
+        <h2>Enlace de Consulta</h2>
+
+        <p>
+            Para ampliar la información sobre ventajas y desventajas de la tecnología
+            puedes visitar el siguiente enlace:
+        </p>
+
+        <a href="https://www.iebschool.com/hub/ventajas-desventajas-tecnologia/" target="_blank">
+            Ventajas y Desventajas de la Tecnología - IEBS School
+        </a>
 
     </section>
 
-    <footer>
-
-    </footer>
 </body>
+
 </html>

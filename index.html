@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tarea 2026</title>
+  <meta charset="UTF-8">
+  <title>APIs y Bases de Datos</title>
+  <script src="script.js"></script>
 </head>
 <body>
+  <h1>Componentes clave y mecanismos de comunicación</h1>
+  <h2>APIs y Bases de Datos</h2>
 
-    <header>
-        <h1 style="background-color: transparent;"> Arquitectura de Microservicios </h1>
-    </header>
-        <div class="indice-referencias">
-            <h2 class="titulo-indice"> TEMAS</h2>
-            <div class="referencias">
-                <a class="referencias" href="index.html"> Inicio </a>
-                <a class="referencias" href="tema1.html"> Tema 1 </a>
-                <a class="referencias" href="tema2.html"> Tema 2 </a>
-                <a class="referencias" href="tema3.html"> Tema 3 </a>
-                <a class="referencias" href="tema4.html"> Tema 4 </a>
-            </div>
-        </div>
-        <h2> Introducción</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnr-lJ0HjJOdTSdU3hiotZPaG0D5UJHLPTtQc1DZ_OHXsdGyqvBc3YLzEc&s=10" alt="foto-1">
-    <section>
+  <!-- Menú -->
+  <nav>
+    <a href="#apis">APIs</a>
+    <a href="#basesdedatos">Bases de Datos</a>
+    <a href="#comunicacion">Comunicación</a>
+    <a href="#seguridad">Seguridad</a>
+  </nav>
 
-    </section>
+  <!-- Sección APIs -->
+  <section id="apis">
+    <h2>Interfaces de Programación de Aplicaciones (APIs)</h2>
+    <img src="img/api.png" alt="API Icono">
+    <p>Las APIs permiten que diferentes sistemas se comuniquen entre sí de manera estandarizada.</p>
+    <h3>Tipos de APIs</h3>
+    <ul>
+      <li>REST</li>
+      <li>SOAP</li>
+      <li>GraphQL</li>
+    </ul>
+    <table>
+      <tr><th>Tipo</th><th>Características</th></tr>
+      <tr><td>REST</td><td>Basado en HTTP, ligero</td></tr>
+      <tr><td>SOAP</td><td>Más complejo, basado en XML</td></tr>
+      <tr><td>GraphQL</td><td>Consultas flexibles y eficientes</td></tr>
+    </table>
+  </section>
 
-    <footer>
+  <!-- Sección Bases de Datos -->
+  <section id="basesdedatos">
+    <h2>Bases de Datos</h2>
+    <img src="img/database.png" alt="DATA BASE Icono">
+    <p>Las bases de datos almacenan y organizan la información para que pueda ser consultada y modificada eficientemente.</p>
+    <h3>Clasificación</h3>
+    <ol>
+      <li>Relacionales (SQL)</li>
+      <li>No Relacionales (NoSQL)</li>
+    </ol>
+  </section>
 
-    </footer>
-    
+  <!-- Sección Comunicación -->
+  <section id="comunicacion">
+    <h2>Mecanismos de Comunicación</h2>
+    <img src="img/communication.png" alt="COMMUNICATION Icono">
+    <p>Los sistemas utilizan protocolos y APIs para intercambiar datos de manera segura y eficiente.</p>
+    <h3>Protocolos comunes</h3>
+    <ul>
+      <li>HTTP/HTTPS</li>
+      <li>WebSockets</li>
+      <li>MQTT</li>
+    </ul>
+  </section>
+
+  <!-- Sección Seguridad -->
+  <section id="seguridad">
+    <h2>Seguridad en la Comunicación</h2>
+    <img src="img/seguritylock.png" alt="SEGURITY LOCK">
+    <p>La seguridad es fundamental en el intercambio de datos entre APIs y bases de datos.</p>
+    <h3>Buenas prácticas</h3>
+    <ol>
+      <li>Uso de HTTPS</li>
+      <li>Autenticación y autorización</li>
+      <li>Cifrado de datos</li>
+    </ol>
+  </section>
+
+  <!-- Enlace externo -->
+  <footer>
+    <p>Más información en <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a></p>
+  </footer>
 </body>
 </html>
